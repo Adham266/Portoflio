@@ -1,120 +1,98 @@
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adham Shoman | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adham Shoman | Web Developer</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background: #f4f4f4;
       color: #333;
     }
-    header, section, footer {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
     header {
-      background-color: #0f172a;
+      background: #0077b5;
       color: white;
+      padding: 20px;
       text-align: center;
     }
-    h1 { margin: 10px 0; }
-    h2 { color: #0f172a; }
-    .section-title {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-    }
-    ul { list-style-type: none; padding: 0; }
-    li::before { content: '✓ '; color: green; }
-    .projects { margin-bottom: 30px; }
-    .project {
-      background: #fff;
-      padding: 15px;
-      margin-bottom: 10px;
-      border-left: 5px solid #0f172a;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    .contact p { line-height: 1.6; }
-    .lang-toggle {
+    nav {
       text-align: center;
-      margin-top: 10px;
+      margin: 20px 0;
     }
-    button {
-      background-color: #0f172a;
-      color: white;
-      padding: 8px 16px;
-      border: none;
-      cursor: pointer;
-      margin: 5px;
+    nav a {
+      margin: 0 10px;
+      color: #0077b5;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 14px;
+      color: #777;
+    }
+    .arabic {
+      direction: rtl;
+      text-align: right;
+      font-family: 'Cairo', sans-serif;
     }
   </style>
 </head>
 <body>
-  <div class="lang-toggle">
-    <button onclick="setLang('en')">English</button>
-    <button onclick="setLang('ar')">العربية</button>
-  </div>
 
   <header>
-    <h1 data-en="Adham Shoman" data-ar="أدهم شومان">Adham Shoman</h1>
-    <p data-en="Junior Web Developer" data-ar="مطور ويب مبتدئ">Junior Web Developer</p>
+    <h1>Adham Shoman</h1>
+    <p>Beginner Web Developer | HTML, JavaScript, Python</p>
   </header>
 
-  <section>
-    <h2 class="section-title" data-en="About Me" data-ar="من أنا">About Me</h2>
-    <p data-en="I'm Adham Shoman, a 16-year-old web developer passionate about technology and design. I specialize in building clean, responsive websites using HTML, JavaScript, and Python. I'm always learning and looking to grow through real-world freelance projects."
-       data-ar="أنا أدهم شومان، مطور ويب عمري 16 سنة، شغوف بالتكنولوجيا والتصميم. أمتلك مهارات في HTML وJavaScript وPython، وأسعى دائمًا لتعلم المزيد واكتساب الخبرة من خلال مشاريع العمل الحر.">
-    </p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm Adham Shoman, a 16-year-old freelance web developer. I build websites using HTML, JavaScript, and Python. I'm passionate about learning and improving through personal projects and freelance work. This portfolio is built in both English and Arabic.</p>
   </section>
 
-  <section>
-    <h2 class="section-title" data-en="Skills" data-ar="المهارات">Skills</h2>
+  <section class="arabic">
+    <h2>من أنا</h2>
+    <p>أنا أدهم شومان، مطور ويب حر عمره 16 سنة. أُتقن HTML وJavaScript وPython. أحب التعلم والعمل على مشاريع شخصية لتطوير مهاراتي. هذا الموقع بلغتين: العربية والإنجليزية.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
     <ul>
       <li>HTML</li>
-      <li>CSS</li>
       <li>JavaScript</li>
       <li>Python</li>
+      <li>Responsive Design</li>
     </ul>
   </section>
 
-  <section class="projects">
-    <h2 class="section-title" data-en="Projects" data-ar="المشاريع">Projects</h2>
-    <div class="project">
-      <strong data-en="Portfolio Website" data-ar="موقع بورتفوليو">Portfolio Website</strong>
-      <p data-en="A simple and responsive personal portfolio website built with HTML and CSS."
-         data-ar="موقع بورتفوليو بسيط ومتجاوب تم إنشاؤه باستخدام HTML وCSS."></p>
-    </div>
-    <div class="project">
-      <strong data-en="Restaurant Landing Page" data-ar="صفحة مطعم رئيسية">Restaurant Landing Page</strong>
-      <p data-en="A landing page for a fictional restaurant. Includes a menu section and contact form."
-         data-ar="صفحة رئيسية لمطعم وهمي، تتضمن قائمة طعام ونموذج تواصل."></p>
-    </div>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:adhamshoman2009@gmail.com">adhamshoman2009@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/201128566626" target="_blank">01128566626</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/adhamshoman266" target="_blank">adhamshoman266</a></p>
   </section>
 
-  <section id="contact">
-  <h2>Contact Me</h2>
-  <p>Email: <a href="mailto:adhamshoman2009@gmail.com">adhamshoman2009@gmail.com</a></p>
-  <p>WhatsApp: <a href="https://wa.me/201128566626" target="_blank">01128566626</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/adhamshoman266" target="_blank">adhamshoman266</a></p>
-</section>
-
   <footer>
-    <p style="text-align: center;">&copy; 2025 Adham Shoman</p>
+    &copy; 2025 Adham Shoman — All rights reserved.
   </footer>
 
-  <script>
-    function setLang(lang) {
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.innerText = el.getAttribute(`data-${lang}`);
-      });
-      document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-    }
-  </script>
 </body>
 </html>
