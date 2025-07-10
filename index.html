@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adham Shoman | Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header, section, footer {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    header {
+      background-color: #0f172a;
+      color: white;
+      text-align: center;
+    }
+    h1 { margin: 10px 0; }
+    h2 { color: #0f172a; }
+    .section-title {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+    ul { list-style-type: none; padding: 0; }
+    li::before { content: '✓ '; color: green; }
+    .projects { margin-bottom: 30px; }
+    .project {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-left: 5px solid #0f172a;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .contact p { line-height: 1.6; }
+    .lang-toggle {
+      text-align: center;
+      margin-top: 10px;
+    }
+    button {
+      background-color: #0f172a;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="lang-toggle">
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('ar')">العربية</button>
+  </div>
+
+  <header>
+    <h1 data-en="Adham Shoman" data-ar="أدهم شومان">Adham Shoman</h1>
+    <p data-en="Junior Web Developer" data-ar="مطور ويب مبتدئ">Junior Web Developer</p>
+  </header>
+
+  <section>
+    <h2 class="section-title" data-en="About Me" data-ar="من أنا">About Me</h2>
+    <p data-en="I'm Adham Shoman, a 16-year-old web developer passionate about technology and design. I specialize in building clean, responsive websites using HTML, JavaScript, and Python. I'm always learning and looking to grow through real-world freelance projects."
+       data-ar="أنا أدهم شومان، مطور ويب عمري 16 سنة، شغوف بالتكنولوجيا والتصميم. أمتلك مهارات في HTML وJavaScript وPython، وأسعى دائمًا لتعلم المزيد واكتساب الخبرة من خلال مشاريع العمل الحر.">
+    </p>
+  </section>
+
+  <section>
+    <h2 class="section-title" data-en="Skills" data-ar="المهارات">Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+    </ul>
+  </section>
+
+  <section class="projects">
+    <h2 class="section-title" data-en="Projects" data-ar="المشاريع">Projects</h2>
+    <div class="project">
+      <strong data-en="Portfolio Website" data-ar="موقع بورتفوليو">Portfolio Website</strong>
+      <p data-en="A simple and responsive personal portfolio website built with HTML and CSS."
+         data-ar="موقع بورتفوليو بسيط ومتجاوب تم إنشاؤه باستخدام HTML وCSS."></p>
+    </div>
+    <div class="project">
+      <strong data-en="Restaurant Landing Page" data-ar="صفحة مطعم رئيسية">Restaurant Landing Page</strong>
+      <p data-en="A landing page for a fictional restaurant. Includes a menu section and contact form."
+         data-ar="صفحة رئيسية لمطعم وهمي، تتضمن قائمة طعام ونموذج تواصل."></p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2 class="section-title" data-en="Contact" data-ar="تواصل معي">Contact</h2>
+    <p>Email: <a href="mailto:adhamshoman2009@gmail.com">adhamshoman2009@gmail.com</a></p>
+    <p>WhatsApp: 01128566626</p>
+    <p>GitHub: (Coming soon)</p>
+  </section>
+
+  <footer>
+    <p style="text-align: center;">&copy; 2025 Adham Shoman</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerText = el.getAttribute(`data-${lang}`);
+      });
+      document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+    }
+  </script>
+</body>
+</html>
